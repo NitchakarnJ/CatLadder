@@ -1,6 +1,6 @@
 ### IntelliJ IDEA ###
 #!**/src/main/**/out/
-!**/src/
+!**/src/main/**/out/
 ### Eclipse ###
 .apt_generated
 .classpath
