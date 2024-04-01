@@ -1,9 +1,6 @@
 package utils;
 
-import gui.BGPane;
-import gui.RootPane;
-import gui.WelcomePage;
-import gui.SelectPlayer;
+import gui.*;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
 import javafx.scene.Node;
@@ -39,6 +36,7 @@ public class Goto {
     }
     public static void descPage(){
         clear();
-
+        DescPane descPane = new DescPane();
+        rootPane.getChildren().add(descPane);
     }
 }

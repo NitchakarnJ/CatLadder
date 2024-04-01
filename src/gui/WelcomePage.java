@@ -47,7 +47,7 @@ public class WelcomePage extends Pane {
         playButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                Goto.selectPlayer();
+                Goto.descPage();
             }
         });
 
