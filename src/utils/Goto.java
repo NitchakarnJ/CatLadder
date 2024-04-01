@@ -37,4 +37,8 @@ public class Goto {
         rootPane.getChildren().add(welcomePage);
 
     }
+    public static void descPage(){
+        clear();
+
+    }
 }

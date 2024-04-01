@@ -22,7 +22,7 @@ public class Main extends Application{
         //RootPane root = RootPane.getRootPane();
         //root.setAlignment(Pos.TOP_CENTER);
         //set เท่าไหร่ดี
-        Scene scene = new Scene(bgPane,720,720);
+        Scene scene = new Scene(bgPane,1080,720);
         primaryStage.setTitle("CatLadder");
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();

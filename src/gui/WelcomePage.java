@@ -34,11 +34,16 @@ public class WelcomePage extends Pane {
 
         Button playButton = playButton();
 
-        welcomeTo.setLayoutX(220);
-        welcomeTo.setLayoutY(158);
+        VBox vbox = new VBox(5,welcomeTo,playButton);
+        vbox.setAlignment(Pos.CENTER);
+        vbox.setTranslateX(420);
+        vbox.setTranslateY(250);
 
-        playButton.setLayoutX(261);
-        playButton.setLayoutY(360);
+//        welcomeTo.setLayoutX(220);
+//        welcomeTo.setLayoutY(158);
+//
+//        playButton.setLayoutX(261);
+//        playButton.setLayoutY(360);
         playButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -46,7 +51,7 @@ public class WelcomePage extends Pane {
             }
         });
 
-        getChildren().addAll(welcomeTo,playButton);
+        getChildren().addAll(vbox);
 
 
 
@@ -57,7 +62,9 @@ public class WelcomePage extends Pane {
         Button button = new Button("Play");
         button.setPrefWidth(200);
         button.setPrefHeight(50);
+        Font font = new Font(40);
         Paint color = Color.web("#F2F5FA");
+        button.setFont(font);
         button.setBackground(Background.fill(color));
         button.setBorder(new Border(new BorderStroke(Color.BLACK,
                 BorderStrokeStyle.SOLID, new CornerRadii(10), BorderWidths.DEFAULT)));

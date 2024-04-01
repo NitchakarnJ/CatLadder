@@ -18,9 +18,9 @@ public class BGPane extends StackPane {
 
     public BGPane(){
         Image image1 = new Image("bg.png");
-        BackgroundImage bgImage = new BackgroundImage(image1, BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER,new BackgroundSize(100,100,true,true,true,true));
-        Background bg =new Background(bgImage);
-        setBackground(bg);
+//        BackgroundImage bgImage = new BackgroundImage(image1, BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER,new BackgroundSize(100,100,true,true,true,true));
+//        Background bg =new Background(bgImage);
+//        setBackground(bg);
 
         Goto.setRootPane(this);
         Goto.welcomePage();
