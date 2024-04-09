@@ -1,31 +1,31 @@
 package main;
 
-import com.sun.javafx.tk.quantum.PrimaryTimer;
-import gui.BGPane;
-import gui.RootPane;
-import gui.WelcomePage;
-import javafx.geometry.Pos;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.application.Application;
 
-import java.io.InputStream;
 
 public class Main extends Application{
 
-    public void start(Stage primaryStage) {
-        BGPane bgPane = new BGPane();
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    public void start(Stage primaryStage) throws Exception {
+//        BGPane bgPane = new BGPane();
         //RootPane root = RootPane.getRootPane();
         //root.setAlignment(Pos.TOP_CENTER);
         //set เท่าไหร่ดี
-        Scene scene = new Scene(bgPane,1080,720);
-        primaryStage.setTitle("CatLadder");
-        primaryStage.setScene(scene);
-        primaryStage.sizeToScene();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../homepage/homepage.fxml"));
+        Parent root = loader.load();
+        primaryStage.setScene(new Scene(root,1080,720));
+//
+//        Scene scene = new Scene(bgPane,1080,720);
+//        primaryStage.setTitle("CatLadder");
+//        primaryStage.setScene(scene);
+//        primaryStage.sizeToScene();
 
         //Background//
 //        Image image1 = new Image("bg.png");
@@ -38,10 +38,4 @@ public class Main extends Application{
         primaryStage.show();
     }
 
-
-
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 }

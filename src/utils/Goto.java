@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.geometry.VPos;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 
 public class Goto {
     private static BGPane rootPane;
@@ -34,9 +35,21 @@ public class Goto {
         rootPane.getChildren().add(welcomePage);
 
     }
+    public static void welcomePage(String numToTest){
+        clear();
+        WelcomePage welcomePage = new WelcomePage();
+        //welcomePage.setAlignment(Pos.TOP_CENTER);
+        rootPane.getChildren().addAll(welcomePage,new Text(numToTest));
+
+    }
     public static void descPage(){
         clear();
         DescPane descPane = new DescPane();
         rootPane.getChildren().add(descPane);
+    }
+    public static void Dice(){
+        clear();
+        Dice dice = new Dice();
+        rootPane.getChildren().add(dice);
     }
 }
