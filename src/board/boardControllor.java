@@ -4,24 +4,35 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Text;
+import logic.GameLogic;
 
 
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class boardControllor  {
+    private static final GameLogic gameLogic = GameLogic.getInstance();
 
     public ImageView rollDice;
+    public Text rollDiceNumber;
+
     @FXML
     private TilePane tileBox;
+    private static final String[] imagePath = new String[]{"defaultDice.png","dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png"};
+
 
     public void initialize() {
-        rollDice.setImage(new Image("dice1.png"));
+//        setRollDice();
+        rollDice.setImage(new Image("defaultDice.png"));
+
+
 //        int numRectangles = 81; // Number of rectangles you want to create
         int tileSize = 77;
         for (int i = 0; i < 9; i++) {
@@ -53,13 +64,13 @@ public class boardControllor  {
 //                tileBox.getChildren().add(text);
                 tileBox.getChildren().add(rectangle);
             }
-
-
-
-
-
-
         }
     }
 
+    public void randomNumberDice(MouseEvent mouseEvent) {
+        int rollDiceNum = gameLogic.rollDice();
+        rollDice.setImage(new Image(imagePath[rollDiceNum]));
+        rollDiceNumber.setText(gameLogic.updateRollDiceNumber(rollDiceNum));
+
+    }
 }

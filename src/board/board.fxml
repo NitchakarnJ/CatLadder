@@ -18,12 +18,16 @@
                   <Font size="42.0" />
                </font>
             </Text>
-            <ImageView fx:id="rollDice" fitHeight="173.0" fitWidth="200.0" layoutX="64.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true" />
-            <Text layoutX="110.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll :">
+            <ImageView fx:id="rollDice" fitHeight="173.0" fitWidth="200.0" layoutX="64.0" layoutY="197.0" onMouseClicked="#randomNumberDice" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="77.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll :">
                <font>
                   <Font size="50.0" />
                </font>
             </Text>
+            <Text fx:id="rollDiceNumber" layoutX="210.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="39.0" />
+               </font></Text>
          </children>
       </AnchorPane>
    </children>
